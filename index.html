@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A to Z Digital Printing | Professional Printing Services</title>
+<meta name="description" content="A to Z Digital Printing provides professional digital printing, flex printing, banners, stickers, visiting cards and customized printing services.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f7f8fc;
+color:#171717;
+line-height:1.6
+}
+a{text-decoration:none;color:inherit}
+.container{width:92%;max-width:1200px;margin:auto}
+
+header{
+background:#111827;
+color:white;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 3px 15px rgba(0,0,0,.2)
+}
+.nav{
+min-height:72px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px
+}
+.logo{
+font-size:24px;
+font-weight:800;
+letter-spacing:.5px
+}
+.logo span{color:#f59e0b}
+nav{
+display:flex;
+gap:28px;
+align-items:center
+}
+nav a{
+font-weight:600;
+font-size:15px;
+transition:.3s
+}
+nav a:hover{color:#f59e0b}
+.menu{
+display:none;
+font-size:28px;
+cursor:pointer
+}
+
+.hero{
+background:linear-gradient(135deg,#111827,#1e3a8a);
+color:white;
+padding:100px 0 90px;
+overflow:hidden
+}
+.hero-content{
+display:grid;
+grid-template-columns:1.2fr .8fr;
+align-items:center;
+gap:50px
+}
+.hero h1{
+font-size:clamp(42px,6vw,72px);
+line-height:1.05;
+margin-bottom:20px
+}
+.hero h1 span{color:#fbbf24}
+.hero p{
+font-size:19px;
+color:#dbeafe;
+max-width:650px;
+margin-bottom:30px
+}
+.buttons{display:flex;gap:15px;flex-wrap:wrap}
+.btn{
+display:inline-block;
+padding:14px 24px;
+border-radius:8px;
+font-weight:700;
+transition:.3s;
+border:2px solid transparent
+}
+.btn-primary{
+background:#f59e0b;
+color:#111827
+}
+.btn-primary:hover{background:#fbbf24;transform:translateY(-2px)}
+.btn-outline{
+border-color:white;
+color:white
+}
+.btn-outline:hover{background:white;color:#111827}
+
+.hero-card{
+background:rgba(255,255,255,.1);
+border:1px solid rgba(255,255,255,.2);
+border-radius:24px;
+padding:40px;
+backdrop-filter:blur(10px);
+text-align:center
+}
+.hero-card .icon{font-size:90px;margin-bottom:15px}
+.hero-card h2{font-size:28px}
+
+section{padding:80px 0}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title h2{font-size:38px;margin-bottom:10px}
+.section-title p{color:#666;max-width:650px;margin:auto}
+
+.services{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px
+}
+.service{
+background:white;
+padding:30px;
+border-radius:16px;
+box-shadow:0 8px 30px rgba(0,0,0,.07);
+border:1px solid #eee;
+transition:.3s
+}
+.service:hover{
+transform:translateY(-7px);
+box-shadow:0 15px 35px rgba(0,0,0,.12)
+}
+.service-icon{
+font-size:42px;
+margin-bottom:15px
+}
+.service h3{font-size:21px;margin-bottom:8px}
+.service p{color:#666}
+
+.about{
+background:#111827;
+color:white
+}
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center
+}
+.about h2{font-size:40px;margin-bottom:20px}
+.about p{color:#d1d5db;margin-bottom:18px}
+.points{display:grid;gap:14px}
+.point{
+display:flex;
+gap:12px;
+align-items:center;
+font-weight:600
+}
+.point span{
+background:#f59e0b;
+color:#111827;
+width:28px;
+height:28px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%
+}
+
+.contact-box{
+background:white;
+border-radius:20px;
+padding:45px;
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:35px
+}
+.contact-info h3{font-size:28px;margin-bottom:15px}
+.contact-item{
+padding:15px 0;
+border-bottom:1px solid #eee
+}
+.contact-item strong{display:block;margin-bottom:3px}
+.contact-item a{color:#1d4ed8;font-weight:600}
+
+form{display:grid;gap:15px}
+input,textarea{
+width:100%;
+padding:14px 16px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:15px;
+font-family:inherit;
+outline:none
+}
+input:focus,textarea:focus{border-color:#1d4ed8}
+textarea{min-height:130px;resize:vertical}
+button{
+border:0;
+cursor:pointer;
+font-size:16px
+}
+
+.cta{
+background:#f59e0b;
+text-align:center;
+padding:65px 20px
+}
+.cta h2{font-size:38px;margin-bottom:12px}
+.cta p{margin-bottom:25px}
+
+footer{
+background:#080d18;
+color:#9ca3af;
+padding:30px 0;
+text-align:center
+}
+footer strong{color:white}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+width:58px;
+height:58px;
+background:#25D366;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:29px;
+font-weight:bold;
+box-shadow:0 5px 20px rgba(0,0,0,.25);
+z-index:999
+}
+
+@media(max-width:800px){
+nav{
+display:none;
+position:absolute;
+top:72px;
+left:0;
+right:0;
+background:#111827;
+padding:20px;
+flex-direction:column
+}
+nav.active{display:flex}
+.menu{display:block}
+.hero{padding:70px 0}
+.hero-content,.about-grid,.contact-box{grid-template-columns:1fr}
+.services{grid-template-columns:1fr 1fr}
+.hero-card{display:none}
+}
+
+@media(max-width:520px){
+.services{grid-template-columns:1fr}
+section{padding:60px 0}
+.section-title h2,.about h2,.cta h2{font-size:31px}
+.hero h1{font-size:44px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+<a href="#" class="logo">A to Z <span>Digital Printing</span></a>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+<nav id="nav">
+<a href="#home" onclick="closeMenu()">Home</a>
+<a href="#services" onclick="closeMenu()">Services</a>
+<a href="#about" onclick="closeMenu()">About</a>
+<a href="#contact" onclick="closeMenu()">Contact</a>
+</nav>
+</div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+<div class="container hero-content">
+
+<div>
+<p style="color:#fbbf24;font-weight:700;margin-bottom:10px">
+PROFESSIONAL PRINTING SERVICES
+</p>
+
+<h1>Print Your Ideas<br><span>With A to Z.</span></h1>
+
+<p>
+High-quality digital printing solutions for businesses,
+events, shops and personal projects. Professional quality,
+fast service and reliable printing.
+</p>
+
+<div class="buttons">
+<a class="btn btn-primary" href="#services">Our Services</a>
+<a class="btn btn-outline" href="https://wa.me/919027674993" target="_blank">WhatsApp Us</a>
+</div>
+</div>
+
+<div class="hero-card">
+<div class="icon">🖨️</div>
+<h2>A to Z Digital Printing</h2>
+<p>Quality Printing. Professional Service.</p>
+</div>
+
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+
+<div class="section-title">
+<h2>Our Printing Services</h2>
+<p>Complete printing solutions for your personal and business requirements.</p>
+</div>
+
+<div class="services">
+
+<div class="service">
+<div class="service-icon">🖨️</div>
+<h3>Digital Printing</h3>
+<p>Sharp, professional and high-quality digital prints for all your needs.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">📢</div>
+<h3>Flex Printing</h3>
+<p>Durable and attractive flex printing for shops, promotions and events.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">🎯</div>
+<h3>Vinyl Printing</h3>
+<p>High-quality vinyl prints suitable for branding, signs and stickers.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">🏷️</div>
+<h3>Sticker Printing</h3>
+<p>Custom stickers for products, packaging, branding and promotions.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">💳</div>
+<h3>Visiting Cards</h3>
+<p>Professional visiting cards that help your business make a strong impression.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">📋</div>
+<h3>Banners & Posters</h3>
+<p>Eye-catching banners and posters for advertising and special occasions.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="container about-grid">
+
+<div>
+<h2>Why Choose A to Z?</h2>
+<p>
+We provide professional printing services with attention
+to quality, clarity and finishing. Whether you need a single
+print or business printing, we are ready to help.
+</p>
+
+<div class="points">
+<div class="point"><span>✓</span> High-quality printing</div>
+<div class="point"><span>✓</span> Professional finishing</div>
+<div class="point"><span>✓</span> Reliable service</div>
+<div class="point"><span>✓</span> Custom printing solutions</div>
+</div>
+</div>
+
+<div>
+<div class="hero-card">
+<div class="icon">✨</div>
+<h2>Quality You Can Trust</h2>
+<p>From design to final print, we focus on delivering professional results.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+
+<div class="section-title">
+<h2>Contact Us</h2>
+<p>Have a printing requirement? Get in touch with us.</p>
+</div>
+
+<div class="contact-box">
+
+<div class="contact-info">
+<h3>A to Z Digital Printing</h3>
+
+<div class="contact-item">
+<strong>📞 Phone</strong>
+<a href="tel:+919027674993">9027674993</a>
+</div>
+
+<div class="contact-item">
+<strong>💬 WhatsApp</strong>
+<a href="https://wa.me/919027674993" target="_blank">Chat on WhatsApp</a>
+</div>
+
+<div class="contact-item">
+<strong>📍 Location</strong>
+<span>Corlim, Old Goa</span>
+</div>
+
+<div class="contact-item">
+<strong>🕐 Service</strong>
+<span>Printing & Digital Solutions</span>
+</div>
+</div>
+
+<form onsubmit="sendMessage(event)">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="tel" id="phone" placeholder="Phone Number" required>
+<textarea id="message" placeholder="Tell us what you want to print..." required></textarea>
+<button class="btn btn-primary" type="submit">Send Enquiry</button>
+</form>
+
+</div>
+</div>
+</section>
+
+<section class="cta">
+<h2>Need Something Printed?</h2>
+<p>Contact A to Z Digital Printing today.</p>
+<a class="btn" style="background:#111827;color:white"
+href="https://wa.me/919027674993" target="_blank">
+Chat on WhatsApp
+</a>
+</section>
+
+</main>
+
+<footer>
+<div class="container">
+<p>© <span id="year"></span> <strong>A to Z Digital Printing</strong>. All Rights Reserved.</p>
+</div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919027674993" target="_blank" aria-label="WhatsApp">
+✆
+</a>
+
+<script>
+function toggleMenu(){
+document.getElementById("nav").classList.toggle("active");
+}
+
+function closeMenu(){
+document.getElementById("nav").classList.remove("active");
+}
+
+function sendMessage(e){
+e.preventDefault();
+
+const name=document.getElementById("name").value;
+const phone=document.getElementById("phone").value;
+const message=document.getElementById("message").value;
+
+const text=
+"Hello A to Z Digital Printing,%0A%0A"+
+"Name: "+encodeURIComponent(name)+"%0A"+
+"Phone: "+encodeURIComponent(phone)+"%0A"+
+"Requirement: "+encodeURIComponent(message);
+
+window.open("https://wa.me/919027674993?text="+text,"_blank");
+}
+
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+
+</body>
+  </html>
